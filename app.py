@@ -9,12 +9,12 @@ def main():
     st.write("Name: Dawn Alyssa B. Danseco")
     st.write("Section: CPE32S5")
     st.write("Instructor: Dr. Jonathan Taylar")
-    st.title("Alligator or Gharial Detector ( Alligator/Gharial)")
-    st.write("This app classifies whether an uploaded image contains an Alligator or Gharial. It is a pre-trained convolutional neural network model.")
+    st.title("Coca Cola or Pepsi Detector ( Coca Cola/Pepsi)")
+    st.write("This app classifies whether an uploaded image contains is either Coca Cola or Pepsi.")
    
     @st.cache_resource
     def load_model():
-        model = tf.keras.models.load_model('weights-improvement-09-0.90.hdf5')
+        model = tf.keras.models.load_model('weights-improvement-06-0.99.hdf5')
         return model
     
     def import_and_predict(image_data, model):
@@ -27,10 +27,10 @@ def main():
         return prediction
 
     model = load_model()
-    class_names = ["Alligator", "Gharial"]
+    class_names = ["Coca Cola", "Pepsi"]
     
 
-    file = st.file_uploader("Choose an ALLIGATOR or GHARIAL image from your computer!", type=["jpg", "png", "jpeg"])
+    file = st.file_uploader("Choose COCA COLA or PEPSI image from your computer :D", type=["jpg", "png", "jpeg"])
 
     if file is None:
         st.text("Please upload an image file!")
