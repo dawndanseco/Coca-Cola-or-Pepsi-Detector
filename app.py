@@ -32,7 +32,7 @@ def main():
 
     file = st.file_uploader("Choose a COCA COLA or PEPSI picture from your computer", type=["jpg", "png", "jpeg"])
 
-     if file is None:
+    if file is None:
         st.text("Please upload an image file!")
     else:
         image = Image.open(file)
