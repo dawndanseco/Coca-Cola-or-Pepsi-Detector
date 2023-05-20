@@ -7,10 +7,10 @@ import cv2
 def main():
     # set up the Streamlit app
     st.write("Name: Dawn Alyssa B. Danseco")
-    st.write("Section: CPE32S5")
+    st.write("Section: CPE32S4")
     st.write("Instructor: Dr. Jonathan Taylar")
-    st.title("Coca Cola or Pepsi Detector ( Coca Cola/Pepsi)")
-    st.write("This app classifies whether an uploaded image contains is either Coca Cola or Pepsi.")
+    st.title("Coca Cola or Pepsi Detector (Coca Cola/Pepsi)")
+    st.write("This app classifies whether an uploaded image whether if it is Coca Cola or Pepsi.")
    
     @st.cache_resource
     def load_model():
@@ -30,7 +30,7 @@ def main():
     class_names = ["Coca Cola", "Pepsi"]
     
 
-    file = st.file_uploader("Choose COCA COLA or PEPSI image from your computer :D", type=["jpg", "png", "jpeg"])
+    file = st.file_uploader("Choose a COCA COLA or PEPSI picture from your computer", type=["jpg", "png", "jpeg"])
 
     if file is None:
         st.text("Please upload an image file!")
@@ -43,5 +43,5 @@ def main():
         string = "Prediction: " + class_name
         st.success(string)
  
-if __name__ == "__main__":
+if name == "main":
     main()
