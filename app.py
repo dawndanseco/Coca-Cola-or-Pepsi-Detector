@@ -43,5 +43,5 @@ def main():
         string = "Prediction: " + class_name
         st.success(string)
  
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
