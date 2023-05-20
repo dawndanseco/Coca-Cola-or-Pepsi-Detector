@@ -27,7 +27,7 @@ def main():
         return prediction
 
     model = load_model()
-    class_names = ["Coca Cola", "Pepsi"]
+    class_names = ["CocaCola", "Pepsi"]
     
 
     file = st.file_uploader("Choose a COCA COLA or PEPSI picture from your computer", type=["jpg", "png", "jpeg"])
