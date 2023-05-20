@@ -14,7 +14,7 @@ def main():
    
     @st.cache_resource
     def load_model():
-        model = tf.keras.models.load_model('weights-improvement-06-0.99.hdf5')
+        model = tf.keras.models.load_model('wweights-improvement-06-0.99.hdf5')
         return model
     
     def import_and_predict(image_data, model):
@@ -33,7 +33,7 @@ def main():
     file = st.file_uploader("Choose a COCA COLA or PEPSI picture from your computer", type=["jpg", "png", "jpeg"])
 
     if file is None:
-        st.text("Please upload an image file!")
+        st.text("Please upload an image file")
     else:
         image = Image.open(file)
         st.image(image, use_column_width=True)
