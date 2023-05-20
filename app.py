@@ -7,14 +7,14 @@ import cv2
 def main():
     # set up the Streamlit app
     st.write("Name: Dawn Alyssa B. Danseco")
-    st.write("Section: CPE32S4")
+    st.write("Section: CPE32S5")
     st.write("Instructor: Dr. Jonathan Taylar")
     st.title("Coca Cola or Pepsi Detector (Coca Cola/Pepsi)")
     st.write("This app classifies whether an uploaded image whether if it is Coca Cola or Pepsi.")
    
     @st.cache_resource
     def load_model():
-        model = tf.keras.models.load_model('weights-improvement-06-0.99.hdf5')
+        model = tf.keras.models.load_model('wweights-improvement-06-0.99.hdf5')
         return model
     
     def import_and_predict(image_data, model):
@@ -32,7 +32,7 @@ def main():
 
     file = st.file_uploader("Choose a COCA COLA or PEPSI picture from your computer", type=["jpg", "png", "jpeg"])
 
-    if file is None:
+     if file is None:
         st.text("Please upload an image file!")
     else:
         image = Image.open(file)
@@ -43,5 +43,5 @@ def main():
         string = "Prediction: " + class_name
         st.success(string)
  
-if _name_ == "_main_":
+if name == "main":
     main()
